@@ -29,5 +29,6 @@ export class MultiRouteComponent {
       next: () => this._router.navigate(['/logged-in']),
       error: (err) => this._router.navigate(['/logged-in'])
     });
+  
   }
 }

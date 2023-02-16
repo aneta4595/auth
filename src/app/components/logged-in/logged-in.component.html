@@ -1,0 +1,5 @@
+<div *ngIf="user$ | async as user">
+    <p>Your userID is: {{user.data.id}}</p>
+</div>
+
+<p>You can also <button mat-raised-button (click)="goBack()">Logout</button></p>

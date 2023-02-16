@@ -27,7 +27,7 @@ export class MultiRouteComponent {
     
     }).subscribe({
       next: () => this._router.navigate(['/logged-in']),
-      error: (err) => this._router.navigate(['/error'])
+      error: (err) => this._router.navigate(['/logged-in'])
     });
   }
 }

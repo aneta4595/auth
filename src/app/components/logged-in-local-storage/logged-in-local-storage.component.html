@@ -1,0 +1,20 @@
+<h1>You are logged in as:</h1>
+<ng-container *ngIf="meDataList$ | async as list">
+<table mat-table [dataSource]="list" class="mat-elevation-z8">
+  
+  <ng-container matColumnDef="key">
+    <th mat-header-cell *matHeaderCellDef> Key </th>
+    <td mat-cell *matCellDef="let element" > {{element.key}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="value" >
+    <th mat-header-cell *matHeaderCellDef> Value </th>
+    <td mat-cell *matCellDef="let element"> {{element.value}} </td>
+  </ng-container>
+
+  
+  <tr mat-header-row *matHeaderRowDef="['key', 'value']"></tr>
+  <tr mat-row *matRowDef="let row; columns: ['key', 'value'];"></tr>
+</table>
+</ng-container>
+<button type="submit" mat-raised-button (click)="logOut()">Logout</button>

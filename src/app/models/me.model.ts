@@ -1,5 +1,5 @@
 export interface MeModel {
-  readonly id: string;
+  readonly uid: string;
   readonly email: string;
 
 }

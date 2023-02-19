@@ -12,11 +12,9 @@ export class UserService {
   getMe(): Observable<MeModel> {
     return this._httpClient.get<any>('https://us-central1-courses-auth.cloudfunctions.net/auth/me').pipe(
       map((response) => ({
-        id: response.data.user.id,
+        uid: response.data.user.context.uid,
         email: response.data.user.context.email,
       }))
     )
-    
-  
 }
 }
